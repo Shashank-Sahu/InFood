@@ -36,7 +36,7 @@ app.post("/recipes", function (req, res) {
         });
 });
 
-app.listen(process.env.port, () => console.log("Server started at 3000"));
+app.listen(process.env.PORT, () => console.log("Server started at 3000"));
 
 
 
