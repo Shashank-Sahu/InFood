@@ -1,0 +1,35 @@
+<%- include("header") -%>
+
+<div class="main-info back">
+    <div class="container-fluid info">
+        <div class="row">
+            <div class="col-lg-6">
+                <h3><%= products.parsed[0].food.label.toUpperCase() %></h1>
+                    <p>Category: <%= products.parsed[0].food.category %></p>
+                    <hr>
+                    <p>Nutrients:</p>
+                    <ul>
+                        <li>ENERC_KCAL:<%= products.parsed[0].food.nutrients.ENERC_KCAL %></li>
+                        <li>PROCNT:<%= products.parsed[0].food.nutrients.PROCNT %></li>
+                        <li>FAT:<%= products.parsed[0].food.nutrients.FAT %></li>
+                        <li>CHOCDF:<%= products.parsed[0].food.nutrients.CHOCDF %></li>
+                        <li>FIBTG:<%= products.parsed[0].food.nutrients.FIBTG %></li>
+                    </ul>
+                    <hr>
+                    <p>Brands:</p>
+                    <ul>
+                        <% products.hints.forEach(element => { %>
+                        <% if (element.food.brand) { %>
+                        <li><%= element.food.brand %></li>
+                        <% } %>
+                        <% }) %>
+                    </ul>
+            </div>
+            <div class="col img-content">
+                <img class="ingr-img" src="<%= products.parsed[0].food.image %>">
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include("footer") -%>

@@ -1,0 +1,35 @@
+<%- include("header") -%>
+
+<div class="main-info back">
+    <div class="container-fluid info">
+        <% products.forEach(element => { %>
+        <div class="row">
+            <div class="col-lg-6">
+                <h3><%= element.recipe.label %> </h3>
+                <p>Source: <%= element.recipe.source %></p>
+                <hr>
+                <p>Diet: <% if (element.recipe.dietLabels[0]) { %>
+                    <%= element.recipe.dietLabels[0] %> </p>
+                <% } else { %>
+                No Data
+                <% } %>
+                <p>Steps:</p>
+                <ul>
+                    <% element.recipe.ingredientLines.forEach(line => { %>
+                    <li><%= line %></li>
+                    <% }) %>
+                </ul>
+                <p>Total Calories: <%= element.recipe.calories %> </p>
+                <hr>
+                <p>For more Info: <a href="<%= element.recipe.url %>">Click Here</a></p>
+            </div>
+            <div class="col img-content">
+                <img class="ingr-img" src="<%= element.recipe.image %>">
+            </div>
+        </div>
+        <hr>
+        <% }) %>
+    </div>
+</div>
+
+<%- include("footer") -%>

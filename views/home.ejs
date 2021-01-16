@@ -1,0 +1,104 @@
+<%- include("header") -%>
+
+
+<div class="container-fluid">
+    <div class="row intro">
+        <div class="col-lg-6">
+            <h1>Welcome To InFood</h1>
+            <p>Get to know more about food, nutrients and find recipes.</p>
+            <p>Search for fruits, vegetables and get info including different brands</p>
+            <p>Search for recipes and their ingredients.</p>
+            <p>A thorough explanation by going through given links</p>
+        </div>
+        <div class="col-lg-6">
+            <div id="carouselExampleInterval" class="carousel slide intro-carousel" data-bs-ride="carousel"
+                data-bs-interval="3000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://media.eggs.ca/assets/RecipePhotos/_resampled/FillWyIxMjgwIiwiNzIwIl0/Fluffy-Pancakes-New-CMS.jpg"
+                            class="d-block w-100 img-slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.wallpaperscraft.com/image/national_day_of_pizza_2015_pizza_cheese_pastries_100087_1280x720.jpg"
+                            class="d-block w-100 img-slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.wallpaperscraft.com/image/french_fries_appetizing_greens_112053_1280x720.jpg"
+                            class="d-block w-100 img-slide">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="content back">
+        <h1>About InFood</h1>
+    </div>
+    <div class="container-fluid content">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <h2>Easy To Find</h2>
+                    <hr>
+                    <p>Just type the ingredient/recipe to Search.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <h2>Recipes with Links</h2>
+                    <hr>
+                    <p>A list of ingredients will be given and a set of instruction. Link will be given for more Info.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <h2>A thorough Read</h2>
+                    <hr>
+                    <p>Find a deatil read on nutrients and a list of different Brands selling the product.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content back">
+        <div class="container-fluid">
+            <div class="row">
+                <h1>Search</h1>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <h2>Find Ingredient Info</h2>
+                        <hr>
+                        <form action="/ingredient" method="POST">
+                            <div class="form-group">
+                                <input type="text" name="ingr">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-success" type="submit">Search</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <h2>Find Recipes</h2>
+                        <hr>
+                        <form action="/recipes" method="POST">
+                            <div class="form-group">
+                                <input type="text" name="rec">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-success" type="submit">Search</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<%- include("footer") -%>
